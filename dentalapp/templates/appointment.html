@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Set an Appointment to see Dr.sarad Maha... {% endblock %}
+{% block content %}
+
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static 'img/bg-img/12.jpg' %});">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title">Appointment</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcumb--con">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Set  Appointment </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+<center>
+  <h1>Review Your Information:</h1>
+        <strong> Name: </strong>{{  your_name  }}<br><br>
+        <strong> Phone: </strong>{{ your_phone }}<br><br>
+        <strong> Email: </strong>{{ your_email }}<br><br>
+        <strong> Address:</strong>{{ your_address }}<br><br>
+        <strong> When:</strong>{{  your_scheldule}}<br><br>
+        <strong>Appointment Day:</strong>{{  your_date }}<br><br>
+        <strong>Your Message:</strong>{{  your_message }}<br><br>
+</center>
+<br>
+<br>
+<br>
+<center><p> we will shortly confirmed your Appointment</p></center>
+  <!-- ***** Breadcrumb Area End ***** -->
+
+  <!-- ***** Contact Area End ***** -->
+
+  {% endblock %}
