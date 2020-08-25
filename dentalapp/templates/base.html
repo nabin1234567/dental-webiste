@@ -89,13 +89,15 @@
                   <li><a href="pricing.html">Pricing</a></li>
 
                   <li><a href="./contact.html">Contact</a></li>
+
                 </ul>
               </div>
               <!-- Nav End -->
             </div>
+            <span class="hello-msg"> Hello , {{request.user}}</span>
 
             <!-- Booking Now Button -->
-            <a href="#" class="btn dento-btn booking-btn">Booking Now</a>
+            <a href="{% url 'logout' %}" class="btn dento-btn booking-btn">logout</a>
           </nav>
         </div>
       </div>
