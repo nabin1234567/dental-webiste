@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from dentalapp import views
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register.html',views.registerPage,name="register"),
+    #path('accounts/', include('django.contrib.auth.urls')),
     path('login.html',views.loginPage,name="login"),
     path('logout/',views.logoutUser,name="logout"),
     path('',views.index,name ="index"),
@@ -28,6 +30,10 @@ urlpatterns = [
     path('about.html',views.about,name="about"),
     path('pricing.html',views.pricing,name="pricing"),
     path('appointment.html',views.appointment,name="appointment"),
+    path("password_reset", views.password_reset_request, name="password_reset"),
+    path('password_reset/done/', auth_views.PasswordResetDoneView.as_view(template_name='main/password/password_reset_done.html'), name='password_reset_done'),
+    path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name="main/password/password_reset_confirm.html"), name='password_reset_confirm'),
+    path('reset/done/', auth_views.PasswordResetCompleteView.as_view(template_name='main/password/password_reset_complete.html'), name='password_reset_complete'),
 
 
 ]

@@ -32,13 +32,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'dentalapp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'dentalapp'
+    'password_reset',
+
 ]
 
 MIDDLEWARE = [
@@ -126,12 +128,14 @@ STATICFILES_DIRS = [
 ]
 
 #email settings
-
+EMAIL_BACKEND ='django.core.mail.backends.cons ole.EmailBackend'
 EMAIL_HOST = 'smpt.gmail.com'
 EMAIL_PORT = 587
 
-EMAIL_HOST_USER ='bhattarainabin068@gmail.com'
-EMAIL_HOST_PASSWORD ='Ilovenepal1'
+
+EMAIL_HOST_USER ='marahattasarad@gmail.com'
+EMAIL_HOST_PASSWORD ='marahattasarad1'
 EMAIL_USE_TLS = True
+
 
 #EMAIL_USE_SSL = false
